@@ -27,7 +27,7 @@ navbar{
 body{
     font-family: 'Hind Siliguri', sans-serif;
     background-color: white;
-    height: 300vh;
+    height: 130vh;
 }
 .nav-list{
     z-index: 1;
@@ -88,12 +88,12 @@ body{
     background: #ff4c4f;
     border-radius: 5px;
 }
-@media(min-width: 600px){
+@media(min-width: 550px){
     .rollbar{
         display: none;
     }
 }
-@media (max-width: 600px){
+@media (max-width: 550px){
     .nav-item:nth-child(2){
         display: none;
     }
@@ -120,7 +120,7 @@ body{
     min-width: 160px;
     box-shadow: 0px 0px 3px black ;
     z-index: 1;
-    top: 100px;
+    top: 80px;
     right: 0.1px;
     
     
@@ -158,14 +158,132 @@ hr{
     display: block;
 }
 
+.cont{
+    display: flex;
+    flex-wrap: wrap;
+    top: 100px;
+    height: 100%;
+}
 .container{
-    position: relative;
-    top: 70px;
-    width: 100%;
-    margin: 0 auto;
-    height: 30%;
+    box-sizing: border-box;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 30%;
+    background-color: gray;
+    top: 100px;
+    height: 80%;
+}
+.container2{
+    box-sizing: border-box;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 70%;
+    background-color: darkgray;
+    flex-direction: row;
+    top: 100px;
+    height: 80%;
 }
 .cont-item{
-    position: relative;
+    list-style: none;
+    justify-content: flex-end;
+    margin-top: 100px;
+}
+.footer {
+    padding: 10px;
+    text-align: center;
+    background: white;
+}
+.fakeimg {
+    box-sizing: border-box;
+    background-color: #aaa;
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+@media(max-width: 550px){
+    .cont{
+        flex-direction: column;
+    }
+    .container{
+        flex-basis: 100%;
+        flex-direction: column;
+    }
+    .container2{
+        flex-basis: 100%;
+        flex-direction: column;
+    }
+}
 
+/* Column container */
+.row {  
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Create two unequal columns that sits next to each other */
+  /* Sidebar/left column */
+  .side {
+    box-sizing: border-box;
+    width: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin-top: 90px;
+    text-align: center;
+    align-content: center;
+  }
+  
+  /* Main column */
+  .main {
+    box-sizing:border-box ;
+    width: 70%;
+    top: 200px;
+    background-color: white;
+    padding: 20px;
+    margin-top: 90px;
+  }
+  
+  /* Fake image, just for this example */
+  .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+  }
+  
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 500px) {
+    .row, .side, .main {   
+      flex-direction: column;
+      width: 100%;
+    }
+}
+p{
+    font-family: 'Poppins', sans-serif;
+}
+img{
+    border-radius: 2px;
+}
+object{
+    border-radius: 2px;
+    background-color: #BD3F32;
+}
+.link{
+    text-decoration: none;
+    color:black;
+    transition: all 0.5s;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    align-content: center;
+}
+.link:hover{
+
+    color: #D2042D;
 }

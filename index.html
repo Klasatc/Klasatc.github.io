@@ -11,6 +11,8 @@
     <title>1tc-strona klasowa</title>
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
     
 </style>
 </head>
@@ -24,33 +26,65 @@
             <a href ="#">Samorząd</a>
         </li>
         <li class="nav-item">
-            <a href ="#">Aktualności</a>
+            <a href ="https://klasatc.github.io">Aktualności</a>
         </li>
         <li class="nav-item">
             <a href ="#">Społeczność</a>
         </li>
         <li class="button">
-            <button href ="#" style="background: #D2042D; border-radius: 3px; font-size: 1rem; font-weight: 600; padding: 0.25rem 0.5rem; cursor: pointer;">Szkoła</button>
+            <a href="https://tm1.edu.pl/" target="_blank"><button style="background: #D2042D; border-radius: 3px; font-size: 1rem; font-weight: 600; padding: 0.25rem 0.5rem; cursor: pointer;">Szkoła</button></a>
         </li>
         <li class="rollbar">
             <div class="dropdown">
                 <button class="button2"><img src="images/menu.svg" style="width: 40px; height: 40px; padding: 0.25rem 0.25rem;" ></button>
                 <div class="dropdown-content">
-                    <a href="#">Aktualności</a><hr>
+                    <a href="https://klasatc.github.io">Aktualności</a><hr>
                     <a href="#">Samorząd</a><hr>
-                    <a href="#">Społeczność</a>
+                    <a href="#">Społeczność</a><hr>
+                    <a href="https://tm1.edu.pl/">Szkoła</a>
                 </div>
             </div>
         </li>
 
        </ul>
     </navbar>
-    <div class="container">
-        <div class="cont-item">
-            <h1>Nasza klasa</h1><br>
-            <h1>1TC</h1>
+    <div class="row">
+        <div class="side">
+            
+          <h2>Nasza Klasa - 1TC</h2>
+          <h5>Zdjęcie szkoły:</h5>
+          <img src="images/school.jpg" style="height: 200px;">
+          <p>Dyrektor mówi o naszym profilu, że jesteśmy przyszłością narodu, może tak jest...</p><hr>
+          <h3>Zakładki:</h3>
+          <p>Wszystkie kategorie wiedzy, które są na naszej stronie</p>
+          <div class="fakeimg" style="height:60px;"><a class="link" href="#">Samorząd</a></div><br>
+          <div class="fakeimg" style="height:60px;"><a class="link" href="#">Aktualności</a></div><br>
+          <div class="fakeimg" style="height:60px;"><a class="link" href="#">Społeczność</a></div>
         </div>
-
+        <div class="main">
+            <h1 style="text-align:center; font-size: xx-large;">Aktualności</h1><hr>
+          <h2>Nowy serwer Discord:</h2>
+          <h5>Data: 02.10.2022 21:50</h5>
+          <img src="images/dc.jpg" style="width: 100%">
+          <b><p>Nasz nowy serwer discord:</p></b>
+          <p>Nasz serwer discord wyposażony jest w wielką ilość nowych technologii. Boty, funckje, zadowoleni gracze to chyba to!!!!</p>
+          <br>
+          <p>Tutaj link: <a href="https://discord.gg/AkAxxkSxJd" style="text-decoration:none;color: cherry;">SERWER KLASOWY</a>
+          <h2>Strona klasowa</h2>
+          <h5>02.10.2022 20:53</h5>
+          <img src="images/webpage.png" style="width: 100%">
+          <b><p>Po wielu staraniach...</p></b>
+          <p>W końcu udało stworzyc mi się stronę dla naszej klasy. Nie polemizuje jest to wielki sukces. Dziękuję wam za wsparcie i pozdrawiam Bombiasza.</p>
+        </div>
+      </div>
+    <div class="footer">
+        <p style="font-weight:100;">powered by:</p>
+        <a href="https://github.io" target=_blank><img src="images/github.svg" style="width: 50px; height:50px; padding-top: 10px;"><br></a><br>
+        <a href="https://discord.com" target=_blank><img src="images/icons8-binoculars-64.png" style="width: 20px; height: 20px; margin: 0 7px;"></a>
+        <a href="https://facebook.com" target=_blank><img src="images/icons8-facebook-64.png" style="width: 20px; height: 20px; margin: 0 7px;"></a>
+        <a href="https://instagram.com" target=_blank><img src="images/icons8-instagram-64.png" style="width: 20px; height: 20px; margin: 0 7px;"></a>
+        <a href="https://twitter.com" target=_blank><img src="images/icons8-twitter-64.png" style="width: 20px; height: 20px; margin: 0 7px;"></a>
+        <p style="font-weight:100;">Made by: <b>Borys Czapski <br>&copy;2022</b></p>
     </div>
 </body>
 <script>
@@ -65,5 +99,12 @@ addEventListener("mousemove", ({clientX, clientY}) => {
     const angle = Math.atan2(clientY - arrowCenter.y, clientX - arrowCenter.x);
     arrow.style.transform = `rotate(${angle}rad)`;
 });
+var txtFile = new XMLHttpRequest();
+txtFile.open("GET", "https://drive.google.com/file/d/1qa6ld3dKdtA7Aop2xhNcr-JFyFf_2IL1/view?usp=sharing", true);
+txtFile.onreadystatechange = function() {
+  if (txtFile.readyState === 4 && txtFile.status == 200) {
+     allText = txtFile.responseText;
+  }
+document.getElementById('ez').innerHTML = allText;}
 </script>
 </html>
